@@ -6,7 +6,9 @@
 # Script to setup an AOSP Build environment on Ubuntu and Linux Mint
 
 LATEST_MAKE_VERSION="4.3"
-UBUNTU_24_PACKAGES="libncurses6 python3 curl"  # Updated package list
+UBUNTU_24_PACKAGES="libncurses5-dev libncursesw5-dev python3 curl"  # Updated package list
+EXTRA_TOOLS="build-essential make gcc-arm-linux-gnueabi gcc-aarch64-linux-gnu clang lld llvm python3 \
+libncurses5-dev libncursesw5-dev bison flex libssl-dev ccache lzop gzip bc rsync zip"  # Extra tools
 PACKAGES=""
 
 sudo apt update && sudo apt install -y software-properties-common
@@ -32,7 +34,7 @@ sudo DEBIAN_FRONTEND=noninteractive \
     pngquant python3-pyelftools re2c schedtool squashfs-tools subversion \
     texinfo unzip w3m xsltproc zip zlib1g-dev lzip \
     libxml-simple-perl libswitch-perl apt-utils rsync \
-    ${PACKAGES} -y
+    ${PACKAGES} ${EXTRA_TOOLS} -y
 
 # Install GitHub CLI
 echo -e "Installing GitHub CLI"
