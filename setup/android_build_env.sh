@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-# Script to setup an AOSP Build environment on Ubuntu 24.04 and others
+# Copyright (C) 2018 Harsh 'MSF Jarvis' Shandilya
+# Copyright (C) 2018 Akhil Narang
+# SPDX-License-Identifier: GPL-3.0-only
+# Script to setup an AOSP Build environment on Ubuntu and Linux Mint
 
 LATEST_MAKE_VERSION="4.3"
 UBUNTU_24_PACKAGES="libncurses6 python3 curl"  # Updated package list
